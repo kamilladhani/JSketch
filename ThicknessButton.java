@@ -12,29 +12,11 @@ public class ThicknessButton extends JComponent {
 
 	public ThicknessButton(int t) {
 		thickness = t;
-		// setBorder(BorderFactory.createRaisedBevelBorder());
 		this.addMouseListener(new MouseAdapter(){
 				public void mousePressed(MouseEvent e){
 					fireActionPerformed(new ActionEvent(this, 0, "ON PRESS FIRE"));
-					// setBorder(BorderFactory.createLoweredBevelBorder());
 					repaint();
 				}
-
-				// public void mouseReleased(MouseEvent e){
-				// 	setBorder(BorderFactory.createRaisedBevelBorder());
-				// 	repaint();
-				// }
-
-				// public void mouseEntered(MouseEvent e){
-				// 	setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED,
-				// 					Color.WHITE, Color.BLACK));
-				// 	repaint();
-				// }
-				// public void mouseExited(MouseEvent e){
-				// 	setBorder(BorderFactory.createRaisedBevelBorder());
-				// 	repaint();
-				// }
-
 		});
 	}
 
@@ -60,7 +42,6 @@ public class ThicknessButton extends JComponent {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
         g2.setColor(Color.BLUE);
-        // g2.setStroke(new BasicStroke(thickness));
         g2.fillRect(10, (getHeight()-thickness)/2, getWidth()-20, thickness);
 	 }
 

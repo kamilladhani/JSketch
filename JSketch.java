@@ -12,8 +12,6 @@ import java.lang.Double;
 // - OnPressButton -> Custom buttons for Color palette
 // - FontAwesome -> Select tool icon
 
-// TODO:
-
 public class JSketch extends JFrame{
 
 	public JSketch() {	
@@ -39,20 +37,6 @@ public class JSketch extends JFrame{
 		model.addObserver(palette);
 		ThicknessView thick = new ThicknessView(model);
 		model.addObserver(thick);
-
-
-		// // Make the focus on the canvas (for KeyListener)
-  //   	this.requestFocus();
-		// this.setFocusable(true);
-		// this.addKeyListener( new KeyAdapter() {
-	 //      	public void keyPressed(KeyEvent e) {
-	 //        	if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-	 //          		model.selected = null;
-	 //          		System.out.println("unselected1");
-	 //        	}
-	 //        	System.out.println("unseladsaected1");
-	 //      	}
-	 //    });
 
 		// Set layouts
 		this.setJMenuBar(menu);
@@ -91,10 +75,7 @@ public class JSketch extends JFrame{
 		canvas.setPreferredSize(new Dimension(600, 600));
 		model.jsp = new JScrollPane(canvas);
 		JScrollPane jsp = model.jsp;
-		// JPanel newjp = new JPanel();
-		// newjp.add(jsp);
 		getContentPane().add(jsp, BorderLayout.CENTER);
-		//this.add(canvas, BorderLayout.CENTER); 
 
 		this.addComponentListener(new ComponentListener(){
 			public void componentResized(ComponentEvent e){
@@ -135,46 +116,6 @@ public class JSketch extends JFrame{
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// Action unselector = new AbstractAction() {
-  //  			public void actionPerformed(ActionEvent e) {
-  //  				model.selected = null;
-  //  				System.out.println("HIIDIDIT");
-		// 	}
-		// };
-  //       getRootPane().getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "unselect");
-  //       getRootPane().getActionMap().put( "unselect", unselector);
-
-		// for (Component c : getRootPane().getComponents()) {
-		// 	c.addKeyListener( new KeyAdapter() {
-		//       	public void keyPressed(KeyEvent e) {
-		//         	if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-		//           		model.selected = null;
-		//           		System.out.println("unselected1");
-		//         	}
-		//         	System.out.println("unseladsaected1");
-		//       	}
-		//     });
-	 //    }
-
-		// JButton jb1 = new JButton("Components");
-		// this.add(jb1, BorderLayout.SOUTH);
-		// jb1.addActionListener(new ActionListener(){
-		// 	public void actionPerformed(ActionEvent e){
-		// 		showComponentHierarchy();
-		// 	}
-		// });
-		
-		// create the window
-		// JPanel p = new JPanel(new GridLayout(2,1));
-		// frame.getContentPane().add(p);
-		// p.add(view);
-		
-		// p.add(view2);
-		
-		// frame.setPreferredSize(new Dimension(300,300));
-		// frame.pack();
-		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// frame.setVisible(true);
 	} 
 
 

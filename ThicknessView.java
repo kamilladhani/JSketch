@@ -23,7 +23,6 @@ class ThicknessView extends JPanel implements Observer {
 		model = model_;
 
 		Box vertBox = Box.createVerticalBox();
-		// this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		JPanel thickBox = new JPanel();
 		GridLayout g = new GridLayout(0,1);
 		g.setVgap(5);
@@ -80,14 +79,6 @@ class ThicknessView extends JPanel implements Observer {
 		vertBox.add(thickBox);
 		this.add(vertBox);
 
-		
-		// setup the event to go to the "controller"
-		// (this anonymous class is essentially the controller)		
-		// addMouseListener(new MouseAdapter() {
-		// 		public void mouseClicked(MouseEvent e) {
-		// 			model.incrementCounter();
-		// 		}
-		// });
 	}
 
 	// Observer interface 
